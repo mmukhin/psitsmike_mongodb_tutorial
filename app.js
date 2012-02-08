@@ -9,6 +9,10 @@
     var Schema = mongoose.Schema
       , ObjectId = Schema.ObjectID;
 
+    var Hobby = new Schema({
+        name            : { type: String, required: true, trim: true, unique: true }
+    });
+
     var Person = new Schema({
         first_name      : { type: String, required: true, trim: true }
       , last_name       : { type: String, required: true, trim: true }
@@ -18,9 +22,6 @@
       , eye_color       : String
     });
 
-    var Hobby = new Schema({
-        name            : { type: String, required: true, trim: true, unique: true }
-    });
 
     var Person = mongoose.model('Person', Person);
 
