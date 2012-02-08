@@ -10,13 +10,13 @@
       , ObjectId = Schema.ObjectID;
 
     var Hobby = new Schema({
-        name            : { type: String, required: true, trim: true, unique: true }
+        name            : { type: String, required: true, trim: true }
     });
 
     var Person = new Schema({
         first_name      : { type: String, required: true, trim: true }
       , last_name       : { type: String, required: true, trim: true }
-      , username        : { type: String, required: true, trim: true, unique: true }
+      , username        : { type: String, required: true, trim: true }
       , hobbies         : [Hobby]
       , shoe_size       : Number
       , eye_color       : String
